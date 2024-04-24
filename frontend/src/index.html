@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <title>TasteFinder: Kulinarische Inspiration auf Knopfdruck</title>
+    <meta content="Kulinarische Inspiration auf Knopfdruck" name="description"/>
+    <meta content="TasteFinder: Kulinarische Inspiration auf Knopfdruck" name="keywords"/>
+
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <link href="main.css" rel="stylesheet"/>
+
+    <style>
+
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+</head>
+
+<body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed"
+      style="background-image: url('header.png');">
+<!-- Include Axios via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<div class="h-full">
+    <!--Nav-->
+    <div class="w-full container mx-auto">
+        <div class="w-full flex items-center justify-between">
+            <a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+               href="#">
+                Taste<span
+                    class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">Finder</span>
+            </a>
+
+            <div class="flex w-1/2 justify-end content-center">
+                <a class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                   href="mailto:%6f%72%74%6d%65%69%65%72%2e%68%61%6e%6e%65%73%40%67%6d%61%69%6c%2e%63%6f%6d">
+                    <svg class="fill-current h-6" viewBox="0 0 330.001 330.001"
+                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                <g id="XMLID_348_">
+                    <path d="M173.871,177.097c-2.641,1.936-5.756,2.903-8.87,2.903c-3.116,0-6.23-0.967-8.871-2.903L30,84.602
+                        L0.001,62.603L0,275.001c0.001,8.284,6.716,15,15,15L315.001,290c8.285,0,15-6.716,15-14.999V62.602l-30.001,22L173.871,177.097z" id="XMLID_350_"
+                    />
+                    <polygon id="XMLID_351_" points="165.001,146.4 310.087,40.001 19.911,40 	"/>
+                </g>
+                </svg>
+                </a>
+
+                <a
+                        class="inline-block text-blue-300 no-underline hover:text-pink-500 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                        href="https://github.com/hannesortmeier"
+                >
+                    <svg class="fill-current h-6" viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Main-->
+    <div class="container pt-12 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+            <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
+                Viele
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+              Restaurants
+            </span>
+                in der Nähe?
+            </h1>
+
+            <div class="flex mb-4 items-center justify-center pt-4">
+                <button
+                        class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                        id="fetchRandomRestaurant"
+                        type="button"
+                >
+                    Kulinarische Inspiration gefällig?
+                </button>
+            </div>
+
+        </div>
+
+        <!--Right Col-->
+        <div class="w-full xl:w-3/5 p-12 overflow-hidden">
+            <div class="w-full h-full flex items-center justify-center" id="data-display"></div>
+            <div class="inline-block flex justify-center items-center -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2">
+                <svg class="w-12 h-12 text-center text-gray-300 animate-spin" fill="none" height="24"
+                     id=loader viewBox="0 0 64 64" visibility="hidden"
+                     width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M32 3C35.8083 3 39.5794 3.75011 43.0978 5.20749C46.6163 6.66488 49.8132 8.80101 52.5061 11.4939C55.199 14.1868 57.3351 17.3837 58.7925 20.9022C60.2499 24.4206 61 28.1917 61 32C61 35.8083 60.2499 39.5794 58.7925 43.0978C57.3351 46.6163 55.199 49.8132 52.5061 52.5061C49.8132 55.199 46.6163 57.3351 43.0978 58.7925C39.5794 60.2499 35.8083 61 32 61C28.1917 61 24.4206 60.2499 20.9022 58.7925C17.3837 57.3351 14.1868 55.199 11.4939 52.5061C8.801 49.8132 6.66487 46.6163 5.20749 43.0978C3.7501 39.5794 3 35.8083 3 32C3 28.1917 3.75011 24.4206 5.2075 20.9022C6.66489 17.3837 8.80101 14.1868 11.4939 11.4939C14.1868 8.80099 17.3838 6.66487 20.9022 5.20749C24.4206 3.7501 28.1917 3 32 3L32 3Z"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="5"></path>
+                    <path
+                            class="text-purple-500"
+                            d="M32 3C36.5778 3 41.0906 4.08374 45.1692 6.16256C49.2477 8.24138 52.7762 11.2562 55.466 14.9605C58.1558 18.6647 59.9304 22.9531 60.6448 27.4748C61.3591 31.9965 60.9928 36.6232 59.5759 40.9762" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="5"></path>
+                </svg>
+            </div>
+        </div>
+
+
+        <!--Footer-->
+        <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
+            <p>
+                <a class="text-gray-500 no-underline hover:no-underline" href="index.html">&copy; TasteFinder 2024</a>
+                |
+                <a class="text-gray-500 no-underline hover:no-underline" href="privacy.html">Datenschutzerklärung</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="tasteFinder.js"></script>
+</body>
+</html>
