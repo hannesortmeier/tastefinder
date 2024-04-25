@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>ingest</module>
-        <module>lambda</module>
     </modules>
 
     <properties>
