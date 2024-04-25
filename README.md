@@ -6,6 +6,16 @@ TasteFinder.de is a cutting-edge, cloud-based application that helps users disco
 location. Leveraging the power of modern technologies, TasteFinder provides a seamless and intuitive user
 experience, making the search for your next dining experience a breeze.
 
+Disclaimer: At the moment, TasteFinder.de only works for the following cities:
+
+- Berlin
+- Hamburg
+- Cologne
+- Munich
+- Frankfurt
+- Münster
+- Emsdetten
+
 ## Getting Started
 
 To get started with TasteFinder, clone the repository and follow the instructions in the individual paragraphs for
