@@ -16,6 +16,8 @@ Disclaimer: At the moment, TasteFinder.de only works for the following cities:
 - Münster
 - Emsdetten
 
+If you love to see the city you are living in or visiting added to the list, please let me know!
+
 ## Getting Started
 
 To get started with TasteFinder, clone the repository and follow the instructions in the individual paragraphs for
