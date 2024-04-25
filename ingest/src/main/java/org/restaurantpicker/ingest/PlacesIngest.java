@@ -23,7 +23,7 @@ public class PlacesIngest {
 
     try (final var placesClient = new PlacesClient(apiKey)) {
       final var callback = new PlacesSearchCallback();
-      try (var in = PlacesIngest.class.getResourceAsStream("/plz_frankfurt.txt")) {
+      try (var in = PlacesIngest.class.getResourceAsStream("/plz_münchen.txt")) {
         final var reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
         for (String line; (line = reader.readLine()) != null; ) {
           var query = "Restaurant " + line;
