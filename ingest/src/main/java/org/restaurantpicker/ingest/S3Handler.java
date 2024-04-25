@@ -55,7 +55,7 @@ public class S3Handler {
   }
 
   private void putObject(String key, String bucketName, String jsonString) {
-    logger.debug("Writing object to bucket: {}", key);
+    logger.debug("Writing object to bucket: {}/{}",  bucketName, key);
     var putObjectRequest = PutObjectRequest.builder().bucket(bucketName).key(key).build();
     s3.putObject(putObjectRequest, RequestBody.fromString(jsonString));
   }
